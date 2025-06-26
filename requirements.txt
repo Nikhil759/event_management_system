@@ -7,3 +7,4 @@ python-decouple
 pytz
 pytest
 httpx
+flask
