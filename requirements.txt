@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+sqlalchemy
+pydantic[email]
+python-decouple
+# psycopg2-binary # For PostgreSQL
+pytz
+pytest
+httpx
