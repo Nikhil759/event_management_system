@@ -1,4 +1,4 @@
-# 🧪 Sr. Python Developer Assignment: Mini Event Management System
+# Assignment: Mini Event Management System
 
 This project is a mini event management system API built with Python, FastAPI, and SQLAlchemy.
 
@@ -25,6 +25,25 @@ The project follows a clean architecture approach, with a clear separation of co
 - `models/`: Contains the SQLAlchemy models and Pydantic schemas.
 - `db/`: Contains the database connection and session management logic.
 - `tests/`: Contains the unit tests (to be implemented).
+
+## MVC Architecture in This Project
+
+This project follows the Model-View-Controller (MVC) architectural pattern, ensuring a clean separation of concerns and maintainability:
+
+- **Model:**
+  - Defined in the `models/` directory (SQLAlchemy models) and `schemas/` (Pydantic schemas).
+  - Responsible for representing the database structure, data validation, and business logic.
+
+- **View:**
+  - Implemented in the `api/` directory (FastAPI routers for API endpoints) and `flask_ui.py` (Flask web UI for HTML rendering).
+  - Handles presentation, user/API input, and output formatting (JSON or HTML).
+
+- **Controller:**
+  - Encapsulated in the `services/` directory.
+  - Contains the business logic, input validation, and orchestrates interactions between models and views.
+
+This structure makes the codebase modular, scalable, and easy to test or extend. Each layer has a clear responsibility, following best practices for professional backend development.
+
 
 ## Setup Instructions
 
@@ -118,3 +137,52 @@ curl -X GET "http://127.0.0.1:8000/events/1"
 - Use a production-grade database like PostgreSQL.
 - Add user authentication and authorization.
 - Deploy the application to a cloud provider.
+
+## Web UI (Flask)
+
+A simple, modern web UI is included for event management.
+
+### How to Run the Web UI
+
+1. Make sure your virtual environment is activated:
+   ```bash
+   source venv/bin/activate
+   ```
+2. Start the Flask UI:
+   ```bash
+   python flask_ui.py
+   ```
+   (If you are not in the event_management_system directory, use the full path: `python event_management_system/flask_ui.py`)
+
+3. Open your browser and go to:
+   - http://127.0.0.1:5000/
+   - or http://localhost:5000/
+
+You will see the Event Management System web interface, where you can create events, register attendees, and view all records.
+
+
+
+
+
+## Running Unit Tests
+
+This project includes unit tests written with `pytest` to ensure the core API features work as expected.
+
+### What is tested?
+- **Event creation:** Verifies that events can be created via the API.
+- **Attendee registration:** Checks that attendees can register for events.
+- **Duplicate registration prevention:** Ensures the same email cannot register twice for the same event.
+- **Event capacity enforcement:** Confirms that no more attendees can register than the event's max capacity.
+
+### How to run the tests
+1. Activate your virtual environment:
+   ```bash
+   source venv/bin/activate
+   ```
+2. Run the tests using pytest:
+   ```bash
+   pytest tests/
+   ```
+
+You should see output indicating the results of each test. All tests should pass if the application is working correctly.
+
