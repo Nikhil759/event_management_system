@@ -6,6 +6,12 @@ This project is a mini event management system API built with Python, FastAPI, a
 
 Build a Mini Event Management System API with a focus on clean architecture, scalability, and data integrity.
 
+##Tech Stack Rationale
+
+This project follows a clear separation of concerns by using Flask for serving the web-based UI and FastAPI for building structured backend APIs with automatic, interactive documentation. The decision to use both frameworks is intentional — Flask efficiently handles template rendering and UI workflows, while FastAPI provides a modern, standards-compliant foundation for the API layer.
+
+Although the current implementation uses synchronous APIs, adopting FastAPI ensures future scalability, native async support, and built-in features like OpenAPI and Swagger documentation, all of which promote maintainability and extensibility. This separation reflects real-world architectural practices where UI and backend services evolve independently, making the system easier to scale and adapt over time.
+
 ## Features
 
 - Create new events with details like name, location, time, and capacity.
