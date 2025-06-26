@@ -1,4 +1,4 @@
-![ChatGPT Image Jun 26, 2025, 10_24_44 PM](https://github.com/user-attachments/assets/65825964-c767-4087-a43d-9624fa010c6a)# Assignment: Mini Event Management System
+# Assignment: Mini Event Management System
 
 This project is a mini event management system API built with Python, FastAPI, and SQLAlchemy.
 
@@ -51,8 +51,6 @@ This project follows the Model-View-Controller (MVC) architectural pattern, ensu
   - Contains the business logic, input validation, and orchestrates interactions between models and views.
 
 This structure makes the codebase modular, scalable, and easy to test or extend. Each layer has a clear responsibility, following best practices for professional backend development.
-
-![ChatGPT Image Jun 26, 2025, 10_24_44 PM](https://github.com/user-attachments/assets/9b0d0724-749d-42c7-8404-7d021bb33425)
 
 
 ## Setup Instructions
