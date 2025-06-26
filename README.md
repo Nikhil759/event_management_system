@@ -125,18 +125,6 @@ curl -X GET "http://127.0.0.1:8000/events/1/attendees"
 curl -X GET "http://127.0.0.1:8000/events/1"
 ```
 
-## Assumptions
-
-- The application uses a SQLite database by default for simplicity. The database file `test.db` will be created in the root directory. This can be configured to use PostgreSQL by setting the `DATABASE_URL` environment variable.
-- Timezones are handled as UTC. The input `start_time` and `end_time` are expected to be in ISO 8601 format with timezone information.
-
-## Next Steps (Bonus)
-
-- Implement unit tests using `pytest`.
-- Add more robust error handling and logging.
-- Use a production-grade database like PostgreSQL.
-- Add user authentication and authorization.
-- Deploy the application to a cloud provider.
 
 ## Web UI (Flask)
 
